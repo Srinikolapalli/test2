@@ -17,8 +17,13 @@
       {
         "name" : "FileAdapter",
         "type" : "REMOTE SOURCE",
-        "privileges" : [ "CREATE VIRTUAL TABLE" ],
-         "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE" ]
+        "privileges" : [ "CREATE VIRTUAL TABLE",
+            "CREATE REMOTE SUBSCRIPTION",
+            "DROP","ALTER","CREATE VIRTUAL TABLE" , 
+            "CREATE VIRTUAL PROCEDURE"  ],
+         "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE",
+            "PROCESS REMOTE SUBSCRIPTION EXCEPTION",
+            "REMOTE EXECUTE" ]
       }
     ]
       },
@@ -40,8 +45,11 @@
             {
               "name" : "FileAdapter",
               "type" : "REMOTE SOURCE",
-              "privileges" : [ "CREATE VIRTUAL TABLE" ],
-              "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE" ]
+              "privileges" : [ "CREATE VIRTUAL TABLE",
+                "DROP","ALTER","CREATE VIRTUAL TABLE" , 
+                "CREATE VIRTUAL PROCEDURE"  ],
+             "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE"
+                ]
             }
           ]
       }    
