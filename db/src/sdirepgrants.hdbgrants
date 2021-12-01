@@ -1,0 +1,50 @@
+{
+    "grantor-service": {
+      "object_owner" : {
+        "schema_privileges" : [
+          {
+            "reference" : "ECCDEV2CLOUD_DEV",
+            "privileges" : [ "INSERT", "UPDATE" ],
+            "privileges_with_grant_option" : [ "SELECT" ]
+          },
+          {
+            "reference" : "CUSTOM_TABLES",
+            "privileges" : [ "INSERT", "UPDATE" ],
+            "privileges_with_grant_option" : [ "SELECT" ]
+          }
+        ],
+        "global_object_privileges" : [
+      {
+        "name" : "FileAdapter",
+        "type" : "REMOTE SOURCE",
+        "privileges" : [ "CREATE VIRTUAL TABLE" ],
+         "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE" ]
+      }
+    ]
+      },
+      
+      "application_user" : {
+         "schema_privileges" : [
+          {
+            "reference" : "ECCDEV2CLOUD_DEV",
+            "privileges" : [ "INSERT", "UPDATE" ],
+            "privileges_with_grant_option" : [ "SELECT" ]
+          },
+          {
+            "reference" : "CUSTOM_TABLES",
+            "privileges" : [ "INSERT", "UPDATE" ],
+            "privileges_with_grant_option" : [ "SELECT" ]
+          }
+        ],
+        "global_object_privileges" : [
+            {
+              "name" : "FileAdapter",
+              "type" : "REMOTE SOURCE",
+              "privileges" : [ "CREATE VIRTUAL TABLE" ],
+              "privileges_with_grant_option" : [ "CREATE VIRTUAL PROCEDURE" ]
+            }
+          ]
+      }    
+      
+    }
+  }
